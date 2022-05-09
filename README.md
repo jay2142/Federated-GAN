@@ -33,3 +33,13 @@ But our GAN can generate accurate examples that are fairly representative of use
 ![image3](images/gan_examples.png)
 
 This GAN has been trained for 250 epochs. The image fidelity was still improving noticeably over time, and we could likely do even better if we trained for even more epochs. 
+
+In addition, we attempted to explore clustering as an unsupervised method of detecting the "correct" number of classes in the dataset. Clustering in the image space was unsuccessful so PCA was conducted. Below are inertia and homogeneity plots for the method vs the number of classes (lines are colored by the number of principle components),
+
+![image4](images/inertia.png)
+
+![image5](images/homogeneity.png)
+
+
+As can be observed in the plots, reducing the number of principal components flattens out the curves slightly. At this point, the results are not good enough to automate our bias adjustment method.
+
